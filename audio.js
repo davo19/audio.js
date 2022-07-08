@@ -180,7 +180,27 @@ volStatus.addEventListener("click", () => {
 
 
 
+const progress = document.getElementById('fill');
+const progressContainer = document.getElementById('handle');
 
 
-
-
+function updateProgress(e) {
+    const { duration, currentTime } = e.srcElement;
+    const progressPercent = (currentTime / duration) * 100;
+    progress.style.width = `${progressPercent}%`;
+  }
+  
+  // Set progress bar
+  function setProgress(e) {
+    const width = this.clientWidth;
+    const clickX = e.offsetX;
+    const duration = song.duration;
+  
+    song.currentTime = (clickX / width) * duration;
+  }
+  
+  // Time/song update
+  song.addEventListener('timeupdate', updateProgress);
+  
+  // Click on progress bar
+  progressContainer.addEventListener('click', setProgress);

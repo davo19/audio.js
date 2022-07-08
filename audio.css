@@ -160,11 +160,11 @@ body {
                                                         margin: 5px;
                                                         }
 
-                                                        #decrease {
-height: 15px;
-width: 15px;
-background-size: cover;
-margin: 5px;
+#decrease {
+    height: 15px;
+    width: 15px;
+    margin: 5px;
+    background-size: cover;
 }
 
 .player {
@@ -177,23 +177,16 @@ margin: 5px;
     animation: AnimationName 2s ease infinite;
 }
 
-@-webkit-keyframes AnimationName {
-    0%{background-position:0% 9%}
-    50%{background-position:100% 92%}
-    100%{background-position:0% 9%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:0% 9%}
-    50%{background-position:100% 92%}
-    100%{background-position:0% 9%}
-}
-@-o-keyframes AnimationName {
-    0%{background-position:0% 9%}
-    50%{background-position:100% 92%}
-    100%{background-position:0% 9%}
-}
 @keyframes AnimationName {
     0%{background-position:0% 9%}
     50%{background-position:100% 92%}
     100%{background-position:0% 9%}
+}
+
+#fill {
+    transition: .1s all;
+}
+
+#handle {
+    transition: .1s all;
 }
